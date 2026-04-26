@@ -27,6 +27,9 @@ class AppColors {
   // Secondary text — dimmed for less emphasis
   static const Color textSecondary = Color(0xFFB0B8D0);
 
+  // Grid line color — subtle divider between empty cells
+  static const Color gridLine = Color(0xFF1E2540);
+
   /// Maps a [PieceColor] enum value to a visual [Color].
   static Color pieceColor(PieceColor piece) {
     switch (piece) {

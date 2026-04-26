@@ -70,14 +70,13 @@ class BoardComponent extends PositionComponent {
           );
         } else {
           paint
-            ..color = const Color(0xFF1E2540)
+            ..color = AppColors.gridLine
             ..style = PaintingStyle.stroke
             ..strokeWidth = 0.5;
           canvas.drawRect(
             Rect.fromLTWH(x * cellSz, y * cellSz, cellSz, cellSz),
             paint,
           );
-          paint.style = PaintingStyle.fill;
         }
       }
     }
