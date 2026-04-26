@@ -73,9 +73,9 @@ class GameBoard {
 
   /// Creates an empty 8×8 board with all cells unoccupied.
   factory GameBoard.empty() {
-    final grid =
-        List.generate(size, (_) => List.filled(size, false, growable: false),
-            growable: false);
+    final grid = List.generate(
+        size, (_) => List.filled(size, false, growable: false),
+        growable: false);
     return GameBoard._(grid);
   }
 
@@ -176,7 +176,8 @@ class GameBoard {
     // Step 6: Return new board and clear result
     return PlaceResult(
       board: GameBoard._(newGrid),
-      clearResult: ClearResult(clearedRows: clearedRows, clearedCols: clearedCols),
+      clearResult:
+          ClearResult(clearedRows: clearedRows, clearedCols: clearedCols),
     );
   }
 

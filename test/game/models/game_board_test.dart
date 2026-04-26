@@ -55,8 +55,7 @@ void main() {
 
   group('ClearResult', () {
     test('linesCleared returns sum of cleared rows and cols', () {
-      const result =
-          ClearResult(clearedRows: [0, 1], clearedCols: [2, 3, 4]);
+      const result = ClearResult(clearedRows: [0, 1], clearedCols: [2, 3, 4]);
       expect(result.linesCleared, equals(5));
     });
 
@@ -313,8 +312,8 @@ void main() {
         expect(board.hasValidMove([singlePiece]), isTrue);
       });
 
-      test(
-          'game-over detection: 3-piece rack cannot fit on checkerboard board', () {
+      test('game-over detection: 3-piece rack cannot fit on checkerboard board',
+          () {
         var board = GameBoard.empty();
 
         // Checkerboard: occupy cells where (x + y) is even.
@@ -343,8 +342,10 @@ void main() {
           id: 'sq2p',
           color: PieceColor.green,
           cells: [
-            GridPoint(0, 0), GridPoint(1, 0),
-            GridPoint(0, 1), GridPoint(1, 1),
+            GridPoint(0, 0),
+            GridPoint(1, 0),
+            GridPoint(0, 1),
+            GridPoint(1, 1),
           ],
         );
 
@@ -434,7 +435,8 @@ void main() {
     });
 
     group('edge cases and complex scenarios', () {
-      test('simultaneous multi-row clear when one piece completes two rows', () {
+      test('simultaneous multi-row clear when one piece completes two rows',
+          () {
         var board = GameBoard.empty();
 
         // Fill row 0 and row 1 each with 7 cells, leaving x=4 empty in both
@@ -442,13 +444,20 @@ void main() {
           id: 'prow',
           color: PieceColor.red,
           cells: [
-            GridPoint(0, 0), GridPoint(1, 0), GridPoint(2, 0), GridPoint(3, 0),
-            GridPoint(5, 0), GridPoint(6, 0), GridPoint(7, 0),
+            GridPoint(0, 0),
+            GridPoint(1, 0),
+            GridPoint(2, 0),
+            GridPoint(3, 0),
+            GridPoint(5, 0),
+            GridPoint(6, 0),
+            GridPoint(7, 0),
           ],
         );
-        var result = board.place(partialRow, const GridPoint(0, 0)); // fills row 0 except x=4
+        var result = board.place(
+            partialRow, const GridPoint(0, 0)); // fills row 0 except x=4
         board = result.board;
-        result = board.place(partialRow, const GridPoint(0, 1)); // fills row 1 except x=4
+        result = board.place(
+            partialRow, const GridPoint(0, 1)); // fills row 1 except x=4
         board = result.board;
 
         // Place a vertical 2-cell piece at (4,0) — fills (4,0) and (4,1) simultaneously,
@@ -464,7 +473,8 @@ void main() {
         expect(result.clearResult.linesCleared, equals(2));
       });
 
-      test('simultaneous multi-col clear when one piece completes two cols', () {
+      test('simultaneous multi-col clear when one piece completes two cols',
+          () {
         var board = GameBoard.empty();
 
         // Fill col 0 and col 1 each with 7 cells, leaving row 4 empty in both
@@ -472,13 +482,20 @@ void main() {
           id: 'pcol',
           color: PieceColor.red,
           cells: [
-            GridPoint(0, 0), GridPoint(0, 1), GridPoint(0, 2), GridPoint(0, 3),
-            GridPoint(0, 5), GridPoint(0, 6), GridPoint(0, 7),
+            GridPoint(0, 0),
+            GridPoint(0, 1),
+            GridPoint(0, 2),
+            GridPoint(0, 3),
+            GridPoint(0, 5),
+            GridPoint(0, 6),
+            GridPoint(0, 7),
           ],
         );
-        var result = board.place(partialCol, const GridPoint(0, 0)); // fills col 0 except row 4
+        var result = board.place(
+            partialCol, const GridPoint(0, 0)); // fills col 0 except row 4
         board = result.board;
-        result = board.place(partialCol, const GridPoint(1, 0)); // fills col 1 except row 4
+        result = board.place(
+            partialCol, const GridPoint(1, 0)); // fills col 1 except row 4
         board = result.board;
 
         // Place a horizontal 2-cell piece at (0,4) — fills (0,4) and (1,4) simultaneously,

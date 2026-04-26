@@ -62,7 +62,9 @@ void main() {
     test('value type in Set: duplicate points collapse', () {
       const p1 = GridPoint(5, 5);
       const p2 = GridPoint(5, 5);
-      final set = <GridPoint>{}..add(p1)..add(p2);
+      final set = <GridPoint>{}
+        ..add(p1)
+        ..add(p2);
       expect(set.length, 1);
     });
 

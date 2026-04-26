@@ -105,7 +105,8 @@ class GameController extends ChangeNotifier {
     _board = record.board;
     _rack = List.of(record.rack);
     _score = record.score;
-    _colorGrid = List.generate(GameBoard.size, (y) => List.of(record.colorGrid[y]));
+    _colorGrid =
+        List.generate(GameBoard.size, (y) => List.of(record.colorGrid[y]));
     _isGameOver = false;
     notifyListeners();
   }

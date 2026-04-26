@@ -39,7 +39,8 @@ void main() {
         ...rack3.map((p) => p.id),
       ];
 
-      expect(allIds.toSet().length, equals(9), reason: 'All 9 piece IDs should be unique');
+      expect(allIds.toSet().length, equals(9),
+          reason: 'All 9 piece IDs should be unique');
     });
 
     test('same seed produces same rack sequence', () {
@@ -66,13 +67,15 @@ void main() {
 
       bool racksAreSame = true;
       for (int i = 0; i < rack1.length; i++) {
-        if (rack1[i].color != rack2[i].color || rack1[i].cells != rack2[i].cells) {
+        if (rack1[i].color != rack2[i].color ||
+            rack1[i].cells != rack2[i].cells) {
           racksAreSame = false;
           break;
         }
       }
 
-      expect(racksAreSame, isFalse, reason: 'Different seeds should produce different racks');
+      expect(racksAreSame, isFalse,
+          reason: 'Different seeds should produce different racks');
     });
 
     test('sequential racks on same generator are different', () {
@@ -84,13 +87,15 @@ void main() {
 
       bool racksAreSame = true;
       for (int i = 0; i < rack1.length; i++) {
-        if (rack1[i].color != rack2[i].color || rack1[i].cells != rack2[i].cells) {
+        if (rack1[i].color != rack2[i].color ||
+            rack1[i].cells != rack2[i].cells) {
           racksAreSame = false;
           break;
         }
       }
 
-      expect(racksAreSame, isFalse, reason: 'Sequential racks should be different');
+      expect(racksAreSame, isFalse,
+          reason: 'Sequential racks should be different');
     });
 
     test('piece counter advances correctly', () {
@@ -122,7 +127,9 @@ void main() {
               break;
             }
           }
-          expect(cellsMatch, isTrue, reason: 'Piece cells must be reference-identical to a shape in PieceShapes.all');
+          expect(cellsMatch, isTrue,
+              reason:
+                  'Piece cells must be reference-identical to a shape in PieceShapes.all');
         }
       }
     });
