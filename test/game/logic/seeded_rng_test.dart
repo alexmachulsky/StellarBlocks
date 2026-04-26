@@ -15,7 +15,8 @@ void main() {
       }
     });
 
-    test('seed independence: different seeds produce different first values', () {
+    test('seed independence: different seeds produce different first values',
+        () {
       final rng1 = SeededRng(1);
       final rng2 = SeededRng(2);
 
@@ -105,8 +106,7 @@ void main() {
       final min = values.reduce((a, b) => a < b ? a : b);
       final max = values.reduce((a, b) => a > b ? a : b);
 
-      expect(min, lessThan(0.2),
-          reason: 'Should have values in lower range');
+      expect(min, lessThan(0.2), reason: 'Should have values in lower range');
       expect(max, greaterThan(0.8),
           reason: 'Should have values in upper range');
     });

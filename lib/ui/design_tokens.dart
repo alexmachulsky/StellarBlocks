@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stellar_blocks/game/models/block_piece.dart';
 
 /// Cosmic night sky color palette for StellarBlocks.
 ///
@@ -25,6 +26,29 @@ class AppColors {
 
   // Secondary text — dimmed for less emphasis
   static const Color textSecondary = Color(0xFFB0B8D0);
+
+  // Grid line color — subtle divider between empty cells
+  static const Color gridLine = Color(0xFF1E2540);
+
+  /// Maps a [PieceColor] enum value to a visual [Color].
+  static Color pieceColor(PieceColor piece) {
+    switch (piece) {
+      case PieceColor.red:
+        return const Color(0xFFE53935);
+      case PieceColor.blue:
+        return const Color(0xFF1E88E5);
+      case PieceColor.green:
+        return const Color(0xFF43A047);
+      case PieceColor.yellow:
+        return const Color(0xFFFDD835);
+      case PieceColor.purple:
+        return const Color(0xFF8E24AA);
+      case PieceColor.orange:
+        return const Color(0xFFFB8C00);
+      case PieceColor.cyan:
+        return const Color(0xFF00ACC1);
+    }
+  }
 }
 
 /// Spacing scale for consistent layout rhythm.

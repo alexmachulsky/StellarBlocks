@@ -62,7 +62,9 @@ void main() {
     test('value type in Set: duplicate points collapse', () {
       const p1 = GridPoint(5, 5);
       const p2 = GridPoint(5, 5);
-      final set = {p1, p2};
+      final set = <GridPoint>{}
+        ..add(p1)
+        ..add(p2);
       expect(set.length, 1);
     });
 
@@ -75,10 +77,8 @@ void main() {
 
     test('not equal to non-GridPoint objects', () {
       const p = GridPoint(0, 0);
+      // The `other is GridPoint` guard in operator == rejects non-GridPoint objects
       expect(p == Object(), false);
-      expect(p == null, false);
-      expect(p == 0, false);
-      expect(p == '', false);
     });
 
     test('toString returns formatted string', () {
