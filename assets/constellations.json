@@ -1,0 +1,284 @@
+{
+  "version": 1,
+  "comment": "Stars use normalized coordinates: (0,0) = top-left, (1,1) = bottom-right of the constellation canvas. Magnitude is for visual brightness only (1.0 = brightest, 0.3 = faint). Edges are pairs of star ids that draw connecting lines once both stars are lit.",
+  "seasons": [
+    {
+      "id": "zodiac",
+      "name": "The Zodiac",
+      "subtitle": "Twelve ancient signs of the night sky",
+      "order": 1,
+      "unlockRequirement": "default",
+      "constellations": [
+        {
+          "id": "aries",
+          "name": "Aries",
+          "subtitle": "The Ram",
+          "order": 1,
+          "lore": "The golden ram whose fleece launched a thousand legends.",
+          "stars": [
+            { "id": "hamal",     "name": "Hamal",     "x": 0.78, "y": 0.32, "magnitude": 1.0 },
+            { "id": "sheratan",  "name": "Sheratan",  "x": 0.55, "y": 0.45, "magnitude": 0.8 },
+            { "id": "mesarthim", "name": "Mesarthim", "x": 0.48, "y": 0.50, "magnitude": 0.6 },
+            { "id": "botein",    "name": "Botein",    "x": 0.22, "y": 0.68, "magnitude": 0.5 }
+          ],
+          "edges": [
+            ["hamal", "sheratan"],
+            ["sheratan", "mesarthim"],
+            ["mesarthim", "botein"]
+          ]
+        },
+        {
+          "id": "taurus",
+          "name": "Taurus",
+          "subtitle": "The Bull",
+          "order": 2,
+          "lore": "The bull's eye burns red — Aldebaran, the follower of the Pleiades.",
+          "stars": [
+            { "id": "aldebaran", "name": "Aldebaran", "x": 0.50, "y": 0.55, "magnitude": 1.0 },
+            { "id": "elnath",    "name": "Elnath",    "x": 0.20, "y": 0.20, "magnitude": 0.9 },
+            { "id": "alheka",    "name": "Alheka",    "x": 0.30, "y": 0.30, "magnitude": 0.6 },
+            { "id": "ain",       "name": "Ain",       "x": 0.58, "y": 0.48, "magnitude": 0.5 },
+            { "id": "alcyone",   "name": "Alcyone",   "x": 0.78, "y": 0.30, "magnitude": 0.7 },
+            { "id": "tianguan",  "name": "Tianguan",  "x": 0.10, "y": 0.40, "magnitude": 0.6 }
+          ],
+          "edges": [
+            ["aldebaran", "ain"],
+            ["ain", "alcyone"],
+            ["aldebaran", "alheka"],
+            ["alheka", "elnath"],
+            ["aldebaran", "tianguan"]
+          ]
+        },
+        {
+          "id": "gemini",
+          "name": "Gemini",
+          "subtitle": "The Twins",
+          "order": 3,
+          "lore": "Castor and Pollux — brothers immortalized side by side in starlight.",
+          "stars": [
+            { "id": "castor",  "name": "Castor",  "x": 0.30, "y": 0.20, "magnitude": 1.0 },
+            { "id": "pollux",  "name": "Pollux",  "x": 0.55, "y": 0.20, "magnitude": 1.0 },
+            { "id": "alhena",  "name": "Alhena",  "x": 0.65, "y": 0.78, "magnitude": 0.8 },
+            { "id": "wasat",   "name": "Wasat",   "x": 0.50, "y": 0.55, "magnitude": 0.6 },
+            { "id": "mebsuta", "name": "Mebsuta", "x": 0.25, "y": 0.55, "magnitude": 0.6 },
+            { "id": "tejat",   "name": "Tejat",   "x": 0.18, "y": 0.78, "magnitude": 0.6 }
+          ],
+          "edges": [
+            ["castor", "mebsuta"],
+            ["mebsuta", "tejat"],
+            ["pollux", "wasat"],
+            ["wasat", "alhena"]
+          ]
+        },
+        {
+          "id": "cancer",
+          "name": "Cancer",
+          "subtitle": "The Crab",
+          "order": 4,
+          "lore": "Faintest of the zodiac — a shy crab among brighter siblings.",
+          "stars": [
+            { "id": "altarf",         "name": "Altarf",         "x": 0.20, "y": 0.78, "magnitude": 0.7 },
+            { "id": "asellus_borealis","name": "Asellus Borealis","x": 0.50, "y": 0.40, "magnitude": 0.5 },
+            { "id": "asellus_australis","name": "Asellus Australis","x": 0.55, "y": 0.55, "magnitude": 0.5 },
+            { "id": "acubens",        "name": "Acubens",        "x": 0.45, "y": 0.78, "magnitude": 0.6 },
+            { "id": "iota_cancri",    "name": "Iota Cancri",    "x": 0.65, "y": 0.18, "magnitude": 0.4 }
+          ],
+          "edges": [
+            ["altarf", "asellus_australis"],
+            ["asellus_australis", "asellus_borealis"],
+            ["asellus_borealis", "iota_cancri"],
+            ["asellus_australis", "acubens"]
+          ]
+        },
+        {
+          "id": "leo",
+          "name": "Leo",
+          "subtitle": "The Lion",
+          "order": 5,
+          "lore": "The Nemean lion, slain by Hercules, set among the stars in honor.",
+          "stars": [
+            { "id": "regulus",   "name": "Regulus",   "x": 0.20, "y": 0.62, "magnitude": 1.0 },
+            { "id": "denebola",  "name": "Denebola",  "x": 0.85, "y": 0.45, "magnitude": 0.9 },
+            { "id": "algieba",   "name": "Algieba",   "x": 0.32, "y": 0.40, "magnitude": 0.8 },
+            { "id": "zosma",     "name": "Zosma",     "x": 0.70, "y": 0.35, "magnitude": 0.7 },
+            { "id": "chertan",   "name": "Chertan",   "x": 0.62, "y": 0.50, "magnitude": 0.6 },
+            { "id": "ras_elased","name": "Ras Elased","x": 0.30, "y": 0.20, "magnitude": 0.6 },
+            { "id": "adhafera",  "name": "Adhafera",  "x": 0.32, "y": 0.30, "magnitude": 0.5 }
+          ],
+          "edges": [
+            ["regulus", "algieba"],
+            ["algieba", "adhafera"],
+            ["adhafera", "ras_elased"],
+            ["regulus", "chertan"],
+            ["chertan", "zosma"],
+            ["zosma", "denebola"],
+            ["chertan", "denebola"]
+          ]
+        },
+        {
+          "id": "virgo",
+          "name": "Virgo",
+          "subtitle": "The Maiden",
+          "order": 6,
+          "lore": "Spica gleams in her hand — a single ear of wheat.",
+          "stars": [
+            { "id": "spica",        "name": "Spica",        "x": 0.55, "y": 0.85, "magnitude": 1.0 },
+            { "id": "porrima",      "name": "Porrima",      "x": 0.40, "y": 0.55, "magnitude": 0.7 },
+            { "id": "vindemiatrix", "name": "Vindemiatrix", "x": 0.20, "y": 0.30, "magnitude": 0.7 },
+            { "id": "auva",         "name": "Auva",         "x": 0.50, "y": 0.40, "magnitude": 0.5 },
+            { "id": "heze",         "name": "Heze",         "x": 0.62, "y": 0.62, "magnitude": 0.5 },
+            { "id": "zavijava",     "name": "Zavijava",     "x": 0.85, "y": 0.20, "magnitude": 0.5 }
+          ],
+          "edges": [
+            ["spica", "heze"],
+            ["heze", "porrima"],
+            ["porrima", "auva"],
+            ["auva", "vindemiatrix"],
+            ["auva", "zavijava"]
+          ]
+        },
+        {
+          "id": "libra",
+          "name": "Libra",
+          "subtitle": "The Scales",
+          "order": 7,
+          "lore": "Balance held aloft — the only zodiac sign that is not a living thing.",
+          "stars": [
+            { "id": "zubeneschamali", "name": "Zubeneschamali", "x": 0.30, "y": 0.30, "magnitude": 0.9 },
+            { "id": "zubenelgenubi",  "name": "Zubenelgenubi",  "x": 0.70, "y": 0.55, "magnitude": 0.8 },
+            { "id": "brachium",       "name": "Brachium",       "x": 0.55, "y": 0.80, "magnitude": 0.6 },
+            { "id": "zubenelhakrabi", "name": "Zubenelhakrabi", "x": 0.20, "y": 0.62, "magnitude": 0.6 },
+            { "id": "methuen",        "name": "Methuen",        "x": 0.85, "y": 0.30, "magnitude": 0.4 }
+          ],
+          "edges": [
+            ["zubeneschamali", "methuen"],
+            ["zubeneschamali", "zubenelgenubi"],
+            ["zubenelgenubi", "brachium"],
+            ["zubenelgenubi", "zubenelhakrabi"]
+          ]
+        },
+        {
+          "id": "scorpio",
+          "name": "Scorpio",
+          "subtitle": "The Scorpion",
+          "order": 8,
+          "lore": "Antares — the heart of the scorpion — burns red opposite Mars.",
+          "stars": [
+            { "id": "antares",  "name": "Antares",  "x": 0.45, "y": 0.30, "magnitude": 1.0 },
+            { "id": "shaula",   "name": "Shaula",   "x": 0.85, "y": 0.85, "magnitude": 0.95 },
+            { "id": "sargas",   "name": "Sargas",   "x": 0.78, "y": 0.75, "magnitude": 0.8 },
+            { "id": "dschubba", "name": "Dschubba", "x": 0.30, "y": 0.18, "magnitude": 0.7 },
+            { "id": "graffias", "name": "Graffias", "x": 0.20, "y": 0.20, "magnitude": 0.6 },
+            { "id": "epsilon_scorpii", "name": "Epsilon Sco", "x": 0.50, "y": 0.55, "magnitude": 0.6 },
+            { "id": "lesath",   "name": "Lesath",   "x": 0.82, "y": 0.78, "magnitude": 0.5 },
+            { "id": "iota_scorpii", "name": "Iota Sco", "x": 0.65, "y": 0.65, "magnitude": 0.5 }
+          ],
+          "edges": [
+            ["graffias", "dschubba"],
+            ["dschubba", "antares"],
+            ["antares", "epsilon_scorpii"],
+            ["epsilon_scorpii", "iota_scorpii"],
+            ["iota_scorpii", "sargas"],
+            ["sargas", "shaula"],
+            ["shaula", "lesath"]
+          ]
+        },
+        {
+          "id": "sagittarius",
+          "name": "Sagittarius",
+          "subtitle": "The Archer",
+          "order": 9,
+          "lore": "Aim past the teapot's spout and you look toward the heart of the galaxy.",
+          "stars": [
+            { "id": "kaus_australis", "name": "Kaus Australis", "x": 0.20, "y": 0.78, "magnitude": 1.0 },
+            { "id": "nunki",          "name": "Nunki",          "x": 0.70, "y": 0.45, "magnitude": 0.85 },
+            { "id": "ascella",        "name": "Ascella",        "x": 0.78, "y": 0.62, "magnitude": 0.8 },
+            { "id": "kaus_media",     "name": "Kaus Media",     "x": 0.30, "y": 0.62, "magnitude": 0.7 },
+            { "id": "kaus_borealis",  "name": "Kaus Borealis",  "x": 0.40, "y": 0.45, "magnitude": 0.7 },
+            { "id": "phi_sgr",        "name": "Phi Sgr",        "x": 0.55, "y": 0.55, "magnitude": 0.6 },
+            { "id": "tau_sgr",        "name": "Tau Sgr",        "x": 0.85, "y": 0.55, "magnitude": 0.5 }
+          ],
+          "edges": [
+            ["kaus_australis", "kaus_media"],
+            ["kaus_media", "kaus_borealis"],
+            ["kaus_borealis", "phi_sgr"],
+            ["phi_sgr", "nunki"],
+            ["nunki", "tau_sgr"],
+            ["nunki", "ascella"],
+            ["ascella", "kaus_australis"],
+            ["phi_sgr", "ascella"]
+          ]
+        },
+        {
+          "id": "capricorn",
+          "name": "Capricorn",
+          "subtitle": "The Sea-Goat",
+          "order": 10,
+          "lore": "Half goat, half fish — a creature of land and tide.",
+          "stars": [
+            { "id": "deneb_algedi", "name": "Deneb Algedi", "x": 0.85, "y": 0.50, "magnitude": 0.85 },
+            { "id": "dabih",        "name": "Dabih",        "x": 0.18, "y": 0.30, "magnitude": 0.75 },
+            { "id": "algedi",       "name": "Algedi",       "x": 0.15, "y": 0.25, "magnitude": 0.7 },
+            { "id": "nashira",      "name": "Nashira",      "x": 0.72, "y": 0.55, "magnitude": 0.6 },
+            { "id": "omega_cap",    "name": "Omega Cap",    "x": 0.45, "y": 0.85, "magnitude": 0.5 }
+          ],
+          "edges": [
+            ["algedi", "dabih"],
+            ["dabih", "omega_cap"],
+            ["omega_cap", "nashira"],
+            ["nashira", "deneb_algedi"],
+            ["deneb_algedi", "algedi"]
+          ]
+        },
+        {
+          "id": "aquarius",
+          "name": "Aquarius",
+          "subtitle": "The Water Bearer",
+          "order": 11,
+          "lore": "From his urn pours the river of stars across the southern sky.",
+          "stars": [
+            { "id": "sadalsuud",  "name": "Sadalsuud",  "x": 0.20, "y": 0.40, "magnitude": 0.85 },
+            { "id": "sadalmelik", "name": "Sadalmelik", "x": 0.40, "y": 0.30, "magnitude": 0.85 },
+            { "id": "skat",       "name": "Skat",       "x": 0.62, "y": 0.78, "magnitude": 0.7 },
+            { "id": "albali",     "name": "Albali",     "x": 0.10, "y": 0.55, "magnitude": 0.5 },
+            { "id": "ancha",      "name": "Ancha",      "x": 0.50, "y": 0.50, "magnitude": 0.5 },
+            { "id": "situla",     "name": "Situla",     "x": 0.55, "y": 0.20, "magnitude": 0.5 },
+            { "id": "sadachbia",  "name": "Sadachbia",  "x": 0.62, "y": 0.32, "magnitude": 0.6 }
+          ],
+          "edges": [
+            ["sadalsuud", "sadalmelik"],
+            ["sadalmelik", "situla"],
+            ["sadalmelik", "sadachbia"],
+            ["sadachbia", "ancha"],
+            ["ancha", "skat"],
+            ["sadalsuud", "albali"]
+          ]
+        },
+        {
+          "id": "pisces",
+          "name": "Pisces",
+          "subtitle": "The Fishes",
+          "order": 12,
+          "lore": "Two fish bound by a cord — the final sign before spring.",
+          "stars": [
+            { "id": "alpherg",     "name": "Alpherg",     "x": 0.40, "y": 0.55, "magnitude": 0.75 },
+            { "id": "kullat_nunu", "name": "Kullat Nunu", "x": 0.72, "y": 0.32, "magnitude": 0.7 },
+            { "id": "fum_al_samakah","name": "Fum al Samakah","x": 0.20, "y": 0.78, "magnitude": 0.6 },
+            { "id": "alrescha",    "name": "Alrescha",    "x": 0.55, "y": 0.50, "magnitude": 0.7 },
+            { "id": "torcular",    "name": "Torcular",    "x": 0.30, "y": 0.40, "magnitude": 0.5 },
+            { "id": "revati",      "name": "Revati",      "x": 0.85, "y": 0.20, "magnitude": 0.5 },
+            { "id": "delta_psc",   "name": "Delta Psc",   "x": 0.18, "y": 0.65, "magnitude": 0.4 }
+          ],
+          "edges": [
+            ["fum_al_samakah", "delta_psc"],
+            ["delta_psc", "torcular"],
+            ["torcular", "alpherg"],
+            ["alpherg", "alrescha"],
+            ["alrescha", "kullat_nunu"],
+            ["kullat_nunu", "revati"]
+          ]
+        }
+      ]
+    }
+  ]
+}
